@@ -1,11 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import React, { useState } from "react";
 function App() {
+  const [count, setCount] = useState(3);
   return (
     <>
       <button>-</button>
-      <span>0</span>
+      <span>{count}</span>
       <button>+</button>
     </>
   );
