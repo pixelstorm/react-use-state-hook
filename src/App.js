@@ -2,13 +2,16 @@ import React, { useState } from "react";
 function App() {
   const [count, setCount] = useState(3);
   const decrementCount = () => {
-    setCount(count - 1);
+    setCount((prevCount) => prevCount - 1);
+  };
+  const incrementCount = () => {
+    setCount((prevCount) => prevCount + 1);
   };
   return (
     <>
       <button onClick={decrementCount}>-</button>
       <span>{count}</span>
-      <button>+</button>
+      <button onClick={incrementCount}>+</button>
     </>
   );
 }
